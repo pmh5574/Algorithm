@@ -4,3 +4,26 @@
 #둘째 줄부터 N개의 줄에 동전의 가치 Ai가 오름차순으로 주어진다. (1 ≤ Ai ≤ 1,000,000, A1 = 1, i ≥ 2인 경우에 Ai는 Ai-1의 배수)
 #첫째 줄에 K원을 만드는데 필요한 동전 개수의 최솟값을 출력한다.
 #10 4200, 1 5 10 50 100 500 1000 5000 10000 50000 = 6
+N, K = map(int, input().split())
+
+# A 변수 초기화
+A = []
+
+# 반복문으로 A에 N개 만큼 값 넣어줌
+for _ in range(N):
+    A.append(int(input()))
+
+# A 오름차순 정렬
+A.sort(reverse=False)
+
+if A.index(K): # 같은 값이 있으면 바로 끝
+    print(1)
+else:
+    B = 0
+    for i in A:
+        if i <= K & K - i > 0 :
+            K = K-i
+            B = B + 1
+        if K == 0:
+            break
+    print(B)
