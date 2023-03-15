@@ -8,15 +8,15 @@ N = int(input())
 
 f = list(map(int, input().split()))
 
-f.sort(reverse=True)
+f.sort()
 
-t = len(f)
+result = 0
+count = 0
 
-for i in range(t):
+for i in f:
+    count += 1
+    if result >= i:
+        result += 1
+        count = 0
 
-    if t-f[i] > 0:
-        t = t-i
-
-
-
-q = t-f[-1]
+print(result)
