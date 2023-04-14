@@ -68,3 +68,67 @@ def solution(K, user_scores):
         # print(ranking)
         print(answer)
     return answer
+
+
+
+
+# 최종 제출 코드
+def solution(K, user_scores):
+
+    answer = 0
+
+    ranking = []
+    score_dict = {}
+
+    for i in user_scores:
+        user, score = i.split()
+        score = int(score)
+
+        if user not in score_dict:
+
+            score_dict[user] = score
+
+            if len(ranking) > K:
+               
+                if score == int(score_dict[ranking[-1]]):
+                    continue
+
+                ranking.pop()
+                ranking.append(user)
+                ranking.sort(key=lambda x: (-score_dict[x], x))
+                
+                answer+= 1
+            else:
+                
+                if len(ranking) > 0:
+                    if score == int(score_dict[ranking[-1]]):
+                        continue
+                
+                ranking.append(user)
+                ranking.sort(key=lambda x: (-score_dict[x], x))
+                answer+= 1
+
+        else:
+
+            if score <= int(score_dict[user]): 
+                continue
+
+            if int(score_dict[user]) < score: 
+                score_dict[user] = score
+
+                nScore = 0
+                for j in score_dict:
+
+                    if nScore == 0:
+                        nScore = score_dict[j]
+                    if nScore < score:
+                        answer+=1
+                        break
+
+                ranking.sort(key=lambda x: (-score_dict[x], x))
+
+                if ranking.index(user) >= K:
+                    answer += 1
+                ranking = ranking[:K]
+        
+    return answer
