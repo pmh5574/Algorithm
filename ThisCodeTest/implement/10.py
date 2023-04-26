@@ -33,17 +33,21 @@ def rotate_90(m):
             ret[k][N-1-i] = m[i][k]
     return ret
 
+# 상하좌우로 이동
 def moveKey(key, lock, N):
 
 
-    return checkKey(lock)
+    return checkKey(lock, N)
 
-def checkKey(lock):
+# 해당 배열 안에 값들 확인
+def checkKey(lock, N):
     
     answer = False
     
-    for i in range(len):
-        t
+    for i in range(N):
+        for j in range(N):
+            if test:
+                ss
     return answer
 
 solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]], [[1, 1, 1], [1, 1, 0], [1, 0, 1]])
