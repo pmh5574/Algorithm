@@ -46,7 +46,7 @@ def checkKey(lock, N):
     
     for i in range(N):
         for j in range(N):
-            if test:
+            if test == 'test':
                 ss
     return answer
 
