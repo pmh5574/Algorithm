@@ -10,13 +10,13 @@ def solution(key, lock):
         for k in range(N):
             n_lock[i+3][k+3] = lock[i][k]
 
-    answer = checkKey(newKey, n_lock, N)
+    answer = moveKey(newKey, n_lock)
     
     for _ in range(N):
 
         newKey = rotate_90(key)
 
-        answer = checkKey(newKey, n_lock, N)
+        answer = moveKey(newKey, n_lock)
 
         if answer:
             break
@@ -34,8 +34,22 @@ def rotate_90(m):
     return ret
 
 # 상하좌우로 이동
-def moveKey(key, lock, N):
+def moveKey(key, lock):
 
+    dx = [0, 0, -1, 1]
+    dy = [-1, 1, 0, 0]
+
+    for i in range(len(lock)):
+    # 이동 후 좌표 구하기
+        for j in range(len(lock)):
+            if i == key[j]:
+                nx = x + dx[j]
+                ny = y + dy[j]
+        # 공간을 벗어나는 경우 무시
+        if nx < 1 or ny < 1 or nx > n or ny > n:
+            continue
+        # 이동 수행
+        x, y = nx, ny
 
     return checkKey(lock, N)
 

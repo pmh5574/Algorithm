@@ -14,8 +14,11 @@ result = 0
 count = 0
 
 for i in f:
+
     count += 1
-    if result >= i:
+
+    if count >= i:
+
         result += 1
         count = 0
 
