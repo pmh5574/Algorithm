@@ -63,6 +63,7 @@ def checkKey(lock, N):
             if test == 'test':
                 ss
                 dd
+                rr
     return answer
 
 solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]], [[1, 1, 1], [1, 1, 0], [1, 0, 1]])
