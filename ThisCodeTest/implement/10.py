@@ -63,6 +63,7 @@ def checkKey(lock, N):
             if test == 'test':
                 ss
                 dd
+                ww
                 rr
     return answer
 
