@@ -27,4 +27,5 @@ if anw >= len(food_times)-1:
     answer = 1
 else:
     answer = anw+1 
+    
 print(answer)
