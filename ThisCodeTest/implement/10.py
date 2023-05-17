@@ -10,13 +10,14 @@ def solution(key, lock):
         for k in range(N):
             n_lock[i+3][k+3] = lock[i][k]
 
-    answer = moveKey(newKey, n_lock)
+    print(n_lock)
+    answer = moveKey(key, n_lock)
     
     for _ in range(N):
 
-        newKey = rotate_90(key)
+        key = rotate_90(key)
 
-        answer = moveKey(newKey, n_lock)
+        answer = moveKey(key, n_lock)
 
         if answer:
             break
@@ -42,7 +43,7 @@ def moveKey(key, lock):
     for i in range(len(lock)):
     # 이동 후 좌표 구하기
         for j in range(len(lock)):
-            if i == key[j]:
+            # if i == key[j]:
                 nx = x + dx[j]
                 ny = y + dy[j]
         # 공간을 벗어나는 경우 무시
@@ -50,21 +51,20 @@ def moveKey(key, lock):
             continue
         # 이동 수행
         x, y = nx, ny
+    print(key)
 
-    return checkKey(lock, N)
+    print(lock)
+
+    return checkKey(lock, key)
 
 # 해당 배열 안에 값들 확인
 def checkKey(lock, N):
     
     answer = False
     
-    for i in range(N):
-        for j in range(N):
-            if test == 'test':
-                ss
-                dd
-                ww
-                rr
+    # for i in range(N):
+    #     for j in range(N):
+            
     return answer
 
 solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]], [[1, 1, 1], [1, 1, 0], [1, 0, 1]])
