@@ -14,14 +14,14 @@ def solution(key, lock):
     print(n_lock)
     answer = moveKey(key, n_lock)
     
-    for _ in range(N):
+    # for _ in range(N):
 
-        key = rotate_90(key)
+    #     key = rotate_90(key)
 
-        answer = moveKey(key, n_lock)
+    #     answer = moveKey(key, n_lock)
 
-        if answer:
-            break
+    #     if answer:
+    #         break
 
     return answer
 
@@ -45,6 +45,7 @@ def moveKey(key, lock):
     # 이동 후 좌표 구하기
         for j in range(len(lock)):
             # if i == key[j]:
+                # 수정 해야함 
                 nx = x + dx[j]
                 ny = y + dy[j]
         # 공간을 벗어나는 경우 무시
@@ -52,6 +53,7 @@ def moveKey(key, lock):
             continue
         # 이동 수행
         x, y = nx, ny
+
     print(key)
 
     print(lock)
