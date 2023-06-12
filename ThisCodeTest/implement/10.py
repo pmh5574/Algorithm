@@ -14,14 +14,14 @@ def solution(key, lock):
     print(n_lock)
     answer = moveKey(key, n_lock)
     
-    # for _ in range(N):
+    for _ in range(N):
 
-    #     key = rotate_90(key)
+        key = rotate_90(key)
 
-    #     answer = moveKey(key, n_lock)
+        answer = moveKey(key, n_lock)
 
-    #     if answer:
-    #         break
+        if answer:
+            break
 
     return answer
 
