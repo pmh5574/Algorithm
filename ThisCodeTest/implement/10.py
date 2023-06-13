@@ -11,7 +11,7 @@ def solution(key, lock):
         for k in range(N):
             n_lock[i+3][k+3] = lock[i][k]
 
-    print(n_lock)
+    # print(n_lock)
     answer = moveKey(key, n_lock)
     
     for _ in range(N):
