@@ -17,6 +17,17 @@ for _ in range(L):
     r = list(map(str, input().split()))
     X.append(r[0])
     C.append(r[1])
+
+# 회전함수
+def rotate_90(m):
+    N = len(m)
+    ret = [[0] * N for _ in range(N)]
+    # print(ret)
+    
+    for i in range(N):
+        for k in range(N):
+            ret[k][N-1-i] = m[i][k]
+    return ret
     
 print(X)
 print(C)
