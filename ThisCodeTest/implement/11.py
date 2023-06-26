@@ -30,7 +30,7 @@ for i in range(N):
             
 
         else:
-
+            
         timeCount+=1
 
 # 회전함수
