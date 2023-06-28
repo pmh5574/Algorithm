@@ -27,10 +27,10 @@ for i in range(N):
 
         # 사과가 있으면 몸길이 안줄임
         if _map[i][j] == 1:
-            
+            if timeCount in X: # 해당 값이지 체크
 
         else:
-            
+            qwer
         timeCount+=1
 
 # 회전함수
@@ -44,5 +44,5 @@ def rotate_90(m):
             ret[k][N-1-i] = m[i][k]
     return ret
 
-print(X)
-print(C)
+# print(X)
+# print(C)
