@@ -27,10 +27,10 @@ for i in range(N):
 
         # 사과가 있으면 몸길이 안줄임
         if _map[i][j] == 1:
-            
+            wer
 
         else:
-            
+            wer
         timeCount+=1
 
 # 회전함수
