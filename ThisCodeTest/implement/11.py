@@ -24,14 +24,16 @@ timeCount = 0
 
 for i in range(N):
     for j in range(N):
+        for k in range(len(X)):
 
-        # 사과가 있으면 몸길이 안줄임
-        if _map[i][j] == 1:
-            if timeCount in X: # 해당 값이지 체크
+            # 사과가 있으면 몸길이 안줄임
+            if _map[i][j] == 1:
+                if timeCount == k: # 시간지난거 체크
+                    
+            else:
+                qwer
 
-        else:
-            qwer
-        timeCount+=1
+            timeCount+=1
 
 # 회전함수
 def rotate_90(m):
