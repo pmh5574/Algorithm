@@ -22,13 +22,27 @@ for _ in range(L):
 
 timeCount = 0
 k = 0
+checks = True
+
+i = 0
+j = 0
+
+while checks == True:
+
+    if len(N) < i or len(N) < j: # 맵 벗어나면
+        checks = False # 조건에 따라 종류
+
+    timeCount+=1 # 시간 추가
+
+    
+
 for i in range(N):
     for j in range(N):
         
         if timeCount == X[k]: # 시간지난거 체크
-            if C[k] == 'L':
-                left
-            elif C[k] == 'D':
+            if C[k] == 'L': # L은 왼쪽으로 이동
+                
+            elif C[k] == 'D': # D는 오른쪽 90도
                 rotate_90(m)
             k+=1 #시간 지나면 +1
         else:
