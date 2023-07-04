@@ -21,16 +21,17 @@ for _ in range(L):
     C.append(r[1])
 
 timeCount = 0
-
+k = 0
 for i in range(N):
     for j in range(N):
-
-        # 사과가 있으면 몸길이 안줄임
-        if _map[i][j] == 1:
-            wer
-
+        
+        if timeCount == X[k]: # 시간지난거 체크
+            k+=1 #시간 지나면 +1
         else:
-            wer
+            
+            # 사과가 있으면 몸길이 안줄임
+            if _map[i][j] == 1:
+                ww
         timeCount+=1
 
 # 회전함수
