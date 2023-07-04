@@ -26,6 +26,10 @@ for i in range(N):
     for j in range(N):
         
         if timeCount == X[k]: # 시간지난거 체크
+            if C[k] == 'L':
+                left
+            elif C[k] == 'D':
+                rotate_90(m)
             k+=1 #시간 지나면 +1
         else:
             
