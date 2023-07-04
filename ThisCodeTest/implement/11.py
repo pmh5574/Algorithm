@@ -29,10 +29,19 @@ j = 0
 
 while checks == True:
 
-    if len(N) < i or len(N) < j: # 맵 벗어나면
+    if len(N) < i: # 맵 벗어나면
         checks = False # 조건에 따라 종류
 
+    # 로직 구현
+
     timeCount+=1 # 시간 추가
+
+    if len(N) == j:
+        j = 0
+        i += 1
+    else:
+        j += 1
+    
 
     
 
