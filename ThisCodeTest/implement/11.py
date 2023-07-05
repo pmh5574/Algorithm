@@ -6,7 +6,9 @@ K = int(input()) # K개의 사과
 _map = [[0] * N for _ in range(N)] # N x N 맵 그리기
 
 apple = [] # 사과 위치
+
 for _ in range(K):
+
     r = list(map(int, input().split()))
     _map[r[0]][r[1]] = 1
 
@@ -15,19 +17,23 @@ L = int(input()) # 뱀의 방향 변환
 # X초가 지나면 C로 이동
 X = [] 
 C = [] # L이 왼쪽 D가 90도 방향 회전
+
 for _ in range(L):
+
     r = list(map(str, input().split()))
+
     X.append(r[0])
     C.append(r[1])
 
-timeCount = 0
-k = 0
-checks = True
+timeCount = 0 # 몇 초 흘렀는지
+k = 0 # X값 차례대로 하기 위해서
 
-i = 0
-j = 0
+checks = True # 맵 벗어나는지 확인
 
-jCheck = False
+i = 0 # _map의 행
+j = 0 # _map의 열
+
+jCheck = False # 방향 체크
 
 while checks == True:
 
