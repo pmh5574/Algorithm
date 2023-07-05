@@ -27,39 +27,50 @@ checks = True
 i = 0
 j = 0
 
+jCheck = False
+
 while checks == True:
 
     if len(N) < i: # 맵 벗어나면
         checks = False # 조건에 따라 종류
 
     # 로직 구현
+    if timeCount == X[k]:
+        if C[k] == 'L': # L은 왼쪽으로 이동
+            # 왼쪽으로 함수 실행
+            jCheck = True
+            j -= 1
+        elif C[k] == 'D': # D는 오른쪽 90도
+            _map = rotate_90(_map)
+        
+        k += 1
 
     timeCount+=1 # 시간 추가
 
-    if len(N) == j:
-        j = 0
-        i += 1
-    else:
-        j += 1
+    # if len(N) == j:
+    #     j = 0
+    #     i += 1
+    # else:
+    #     j += 1
     
 
     
 
-for i in range(N):
-    for j in range(N):
+# for i in range(N):
+#     for j in range(N):
         
-        if timeCount == X[k]: # 시간지난거 체크
-            if C[k] == 'L': # L은 왼쪽으로 이동
+#         if timeCount == X[k]: # 시간지난거 체크
+#             if C[k] == 'L': # L은 왼쪽으로 이동
                 
-            elif C[k] == 'D': # D는 오른쪽 90도
-                rotate_90(m)
-            k+=1 #시간 지나면 +1
-        else:
+#             elif C[k] == 'D': # D는 오른쪽 90도
+#                 rotate_90(m)
+#             k+=1 #시간 지나면 +1
+#         else:
             
-            # 사과가 있으면 몸길이 안줄임
-            if _map[i][j] == 1:
-                ww
-        timeCount+=1
+#             # 사과가 있으면 몸길이 안줄임
+#             if _map[i][j] == 1:
+#                 ww
+#         timeCount+=1
 
 # 회전함수
 def rotate_90(m):
