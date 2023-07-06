@@ -11,8 +11,10 @@ for _ in range(K):
 
     r = list(map(int, input().split()))
     _map[r[0]][r[1]] = 1
+    print(_map)
 
-L = int(input()) # 뱀의 방향 변환
+# L = int(input()) # 뱀의 방향 변환
+L = 3 # 뱀의 방향 변환
 
 # X초가 지나면 C로 이동
 X = [] 
@@ -21,9 +23,9 @@ C = [] # L이 왼쪽 D가 90도 방향 회전
 for _ in range(L):
 
     r = list(map(str, input().split()))
-
     X.append(r[0])
     C.append(r[1])
+    print(r)
 
 timeCount = 0 # 몇 초 흘렀는지
 k = 0 # X값 차례대로 하기 위해서
@@ -37,8 +39,10 @@ jCheck = False # 방향 체크
 
 while checks == True:
 
-    if len(N) < i: # 맵 벗어나면
+    if N < i: # 맵 벗어나면
         checks = False # 조건에 따라 종류
+
+    print(checks)
 
     # 로직 구현
     if timeCount == X[k]:
@@ -52,7 +56,8 @@ while checks == True:
         k += 1
 
     timeCount+=1 # 시간 추가
-
+    
+    print(timeCount)
     # if len(N) == j:
     #     j = 0
     #     i += 1
