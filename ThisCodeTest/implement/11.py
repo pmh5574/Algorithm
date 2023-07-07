@@ -56,30 +56,6 @@ while checks == True:
     timeCount+=1 # 시간 추가
     
     print(timeCount)
-    # if len(N) == j:
-    #     j = 0
-    #     i += 1
-    # else:
-    #     j += 1
-    
-
-    
-
-# for i in range(N):
-#     for j in range(N):
-        
-#         if timeCount == X[k]: # 시간지난거 체크
-#             if C[k] == 'L': # L은 왼쪽으로 이동
-                
-#             elif C[k] == 'D': # D는 오른쪽 90도
-#                 rotate_90(m)
-#             k+=1 #시간 지나면 +1
-#         else:
-            
-#             # 사과가 있으면 몸길이 안줄임
-#             if _map[i][j] == 1:
-#                 ww
-#         timeCount+=1
 
 # 회전함수
 def rotate_90(m):
