@@ -22,7 +22,7 @@ C = [] # L이 왼쪽 D가 90도 방향 회전
 for _ in range(L):
 
     r = list(map(str, input().split()))
-    print(r)
+    # print(r)
     X.append(r[0])
     C.append(r[1])
 
@@ -55,7 +55,7 @@ while checks == True:
 
     timeCount+=1 # 시간 추가
     
-    print(timeCount)
+    # print(timeCount)
 
 # 회전함수
 def rotate_90(m):
