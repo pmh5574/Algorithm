@@ -11,7 +11,7 @@ for _ in range(K):
 
     r = list(map(int, input().split()))
     _map[r[0]][r[1]] = 1
-    print(_map)
+    # print(_map)
 
 L = int(input()) # 뱀의 방향 변환
 
@@ -57,6 +57,7 @@ while checks == True:
     
     # print(timeCount)
 
+
 # 회전함수
 def rotate_90(m):
     N = len(m)
@@ -67,6 +68,3 @@ def rotate_90(m):
         for k in range(N):
             ret[k][N-1-i] = m[i][k]
     return ret
-
-print(X)
-print(C)
